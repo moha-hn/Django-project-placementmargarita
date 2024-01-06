@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% load static %}
+		{% load bootstrap4 %}
+		{% bootstrap_css %}
+		{% bootstrap_javascript %}
+
+		<link rel="icon" href="{% static "assets/img/logo.png" %}" >
+        <title>
+			{% block title %}
+			{% endblock %}
+		</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- Fonts-->
+		<link rel="stylesheet" type="text/css" href="{% static "assets/fonts/fontawesome/font-awesome.min.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "assets/fonts/themify-icons/themify-icons.css" %}">
+		<!-- Vendors-->
+		<link rel="stylesheet" type="text/css" href="{% static "assets/js/vendors/bootstrap4/bootstrap-grid.min.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "assets/js/vendors/magnific-popup/magnific-popup.min.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "assets/js/vendors/owl.carousel/owl.carousel.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "assets/js/vendors/_jquery/jquery.min.css" %}">
+		<!-- <link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap4/bootstrap-grid.min.css"> -->
+		<!-- <link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap4/bootstrap-grid.min.css"> -->
+		<!-- App & fonts-->
+		<link rel="stylesheet" type="text/css" href="{% static "https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i&amp;amp;subset=latin-ext" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "assets/css/main.css" %}">
+	</head>
+	
+	<body>
+		<div class="page-wrap">
+			
+			
+			{% block content %}
+			{% endblock %}
+			<!-- footer -->
+			<footer class="footer">
+				<div class="footer__main">
+					<div class="row row-eq-height">
+						<div class="col-8 col-sm-7 col-md-9 col-lg-3 ">
+							<div class="footer__item"><a class="consult_logo" href="#"><img src="{% static "assets/img/logo.png" %}" alt="" style="max-width:170px;"/></a>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 offset-0 offset-sm-0 offset-md-0 offset-lg-0 offset-xl-1 ">
+							<div class="footer__item">
+									
+									<!-- widget-text__widget -->
+									<section class="widget-text__widget widget">
+										<div class="widget-text__content">
+											<h4 style="color:white">Mapa del sitio</h4>
+											<ul>
+												<li><a href={% url "indexfr" %}>Inicio </a></li>
+												<li><a href={% url "emploifr" %}>Oferta de empleo</a></li>
+												<li><a href={% url "contactfr" %}>Contacto  </a></li>
+											</ul>
+										</div>
+									</section><!-- End / widget-text__widget -->
+									
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4 col-lg-2 col-xl-2 ">
+							<div class="footer__item">
+									
+									<!-- widget-text__widget -->
+									<section class="widget-text__widget widget">
+										<div class="widget-text__content">
+											<h4 style="color:white">Síganos </h4>
+											<ul>
+												<li><b><a>512-552-8548 </a></b></li>
+												<li><b><a>aaaaaaaa</a></b></li>
+											</ul>
+										</div>
+									</section><!-- End / widget-text__widget -->
+									
+							</div>
+						</div>
+						
+						<div class="col-sm-6 col-md-4 col-lg-2 col-xl-2  consult_backToTop">
+							<div class="footer__item"><a href="#" id="back-to-top"> <i class="fa fa-angle-up" aria-hidden="true"> </i><span>Back To Top</span></a></div>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<center><a target="_blank" href="https://www.linkedin.com/in/mohamed-hanou-953b251a0/">This project was realised by Mohamed Hanou - All rights reserved - 2023</a></center>
+				<br>
+			</footer><!-- End / footer -->
+			
+		</div>
+		<!-- Vendors-->
+		<script  src="{% static 'assets/js/vendors/jquery/jquery.min.js' %}"></script>
+		<script  src="{% static 'assets/js/vendors/imagesloaded/imagesloaded.pkgd.js' %}"></script>
+		<script  src="{% static 'assets/js/vendors/isotope-layout/isotope.pkgd.js' %}"></script>
+		<script  src="{% static 'assets/js/vendors/jquery.countdown/jquery.countdown.min.js' %}"></script>
+		<script  src="{% static 'assets/js/vendors/jquery.countTo/jquery.countTo.min.js' %}"></script>
+		<script  src="{% static 'assets/js/vendors/jquery.countUp/jquery.countup.min.js' %}"></script>
+		<script  src="{% static 'assets/js/vendors/jquery.matchHeight/jquery.matchHeight.min.js' %}"></script>
+		<script  src="{% static 'assets/js/vendors/jquery.mb.ytplayer/jquery.mb.YTPlayer.min.js'%}"></script>
+		<script  src="{% static 'assets/js/vendors/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+		<script  src="{% static 'assets/js/vendors/masonry-layout/masonry.pkgd.js' %}"></script>
+		<script  src="{% static 'assets/js/vendors/owl.carousel/owl.carousel.js' %}"></script>
+		<script  src="{% static 'assets/js/vendors/jquery.waypoints/jquery.waypoints.min.js' %}"></script>
+		<script  src="{% static 'assets/js/vendors/menu/menu.min.js' %}"></script>
+		<script  src="{% static 'assets/js/vendors/smoothscroll/SmoothScroll.min.js' %}"></script>
+		<!-- App-->
+		<script  src="{% static 'assets/js/main.js' %}"></script>
+	</body>
+</html>

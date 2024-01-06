@@ -1,0 +1,294 @@
+{% extends 'basefr.html' %}
+{% load static %}
+
+
+
+<!DOCTYPE html>
+
+<html>
+	
+	<body>
+		{% block title %}
+			Accueil
+		{% endblock %}
+				
+		{% block content %}	
+			<!-- header -->
+			<header class="header header__style-02">
+				<div class="container">
+					<div class="header__logo"><a href={% url 'indexfr' %}><img src="{%static 'assets/img/logo.png' %}" alt="" style="max-width:65px;"/></a></div>
+					<div class="header__toogleGroup">
+						<div class="header__chooseLanguage">
+										
+							<!-- dropdown -->
+							<div class="dropdown" data-init="dropdown"><a class="dropdown__toggle" href="javascript:void(0)">FR <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+								<div class="dropdown__content" data-position="right">
+									<ul class="list-style-none">
+										<li><a href={% url 'indexfr' %}>FR</a></li>
+										<li><a href={% url 'indexesp' %}>ESP</a></li>
+									</ul>
+								</div>
+							</div><!-- End / dropdown -->
+							
+						</div>
+					</div>
+					
+					<!-- consult-nav -->
+					<nav class="consult-nav">
+						
+						<!-- consult-menu -->
+						<ul class="consult-menu">
+							<li class="current-menu-item" ><a href={% url 'indexfr' %}>Accueil</a>
+							</li>
+							<li ><a href={% url 'emploifr' %}>Nous employons</a>
+							</li>
+                            <li ><a href={% url 'contactfr' %}>Contact</a>
+							</li>
+						</ul><!-- consult-menu -->
+						
+						<div class="navbar-toggle"><span></span><span></span><span></span></div>
+					</nav><!-- End / consult-nav -->
+					
+				</div>
+			</header><!-- End / header -->
+			
+			<!-- Content-->
+			
+			<div class="md-content">
+				
+				<!-- slider -->
+				<div class="slider">
+					
+					<!-- carousel__element owl-carousel -->
+					<div class="carousel__element owl-carousel" data-options='{"items":1,"loop":true,"dots":false,"nav":false,"margin":0, "autoplay": true, "autoplayTimeout": 3000}'>
+						<div class="slider__item" style="background-image: url('/static/assets/img/slider.jpg');">
+							<div class="md-tb">
+								<div class="md-tb__cell">
+									<div class="slider__content">
+										<div class="container">
+											<h2>Placement Margarita</h2>
+											<p>Notre entreprise vous offre une vaste gamme de services, notamment en
+												nettoyage et production. Notre personnel est polyvalent et efficace.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div><!-- End / carousel__element owl-carousel -->
+					
+				</div><!-- End / slider -->
+				
+				<!-- Service-->
+				<!-- Section -->
+				<section class="md-section" style="padding-bottom:0;">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-10 offset-0 offset-sm-0 offset-md-0 offset-lg-1 ">
+								
+								<!-- title-01 -->
+								<div class="title-01 title-01__style-04">
+									<h2 class="title-01__title">Découvrez avec Nous <span>les Talents d'Exception</span> pour Votre Entreprise !</h2>
+								</div><!-- End / title-01 -->
+								
+							</div>
+						</div>
+						
+						<!-- post-03 -->
+						<div class="post-03">
+							<div class="post-03__media"><a href="#"><img src="{%static "assets/img/services/1.jpg" %}" alt=""/></a></div>
+							<div class="post-03__body">
+								<h6 class="post-03__subTitle"></h6>
+								<h2 class="post-03__title"><a href="#">Découverte des Talents Exceptionnels </a></h2>
+								<div class="post-03__description">
+
+									En tant que chasseurs de têtes expérimentés, notre engagement est d'identifier des professionnels exceptionnels parfaitement adaptés à vos besoins spécifiques.
+									Confiez-nous la mission de dénicher les perles rares sur le marché pour simplifier votre processus d'embauche.</div>
+							</div>
+						</div><!-- End / post-03 -->
+						
+						
+						<!-- post-03 -->
+						<div class="post-03 post-03__reverse">
+							<div class="post-03__media"><a href="#"><img src="{%static "assets/img/services/2.jpg" %}" alt=""/></a></div>
+							<div class="post-03__body">
+								<h2 class="post-03__title"><a href="#">Analyse Fine de Vos Besoins  </a></h2>
+								<div class="post-03__description">
+									
+
+									Avant d'entamer le processus de recherche, nous réalisons une analyse approfondie de vos besoins en recrutement. Cela englobe une compréhension minutieuse des compétences techniques requises, des traits culturels essentiels, et des aspirations professionnelles spécifiques à chaque poste. Cette approche détaillée garantit que chaque candidat proposé est soigneusement aligné sur vos exigences.
+									
+									
+									
+								</div>
+							</div>
+						</div><!-- End / post-03 -->
+						
+						
+						<!-- post-03 -->
+						<div class="post-03">
+							<div class="post-03__media"><a href="#"><img src="{%static "assets/img/services/3.jpg" %}" alt=""/></a></div>
+							<div class="post-03__body">
+								<h2 class="post-03__title"><a href="#">Communication Transparente et Continue </a></h2>
+								<div class="post-03__description">La transparence est au cœur de notre méthode. Nous croyons en une communication continue et ouverte tout au long du processus de recrutement. Vous serez informé en temps réel des progrès réalisés, des résultats préliminaires, et nous ajusterons notre stratégie en fonction de vos retours, assurant ainsi une collaboration harmonieuse.
+								</div>
+							</div>
+						</div><!-- End / post-03 -->
+						
+					</div>
+				</section>
+				<!-- End / Section -->
+
+				
+				
+				
+				<!-- About-->
+				
+				<!-- Section -->
+				<section class="md-section" style="background-color:#f7f7f7;">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-6 ">
+								
+								<!-- title-01 -->
+								<div class="title-01 title-01__style-03 md-text-left">
+									<h6 class="title-01__subTitle">A propos</h6>
+									<h2 class="title-01__title">Nous sommes les leaders de cette industrie.</h2>
+									<div>Contactez-nous pour débuter une collaboration fructueuse et sur mesure. Nous sommes prêts à discuter de vos besoins en recrutement et à vous offrir des solutions adaptées à votre entreprise. Votre prochaine étape vers des équipes exceptionnelles commence par un simple contact. Nous sommes impatients de vous entendre !</div>
+								</div><!-- End / title-01 -->
+								
+								<div class="row">
+									<div class="col-sm-4 ">
+										
+										<!-- box-number -->
+										<div class="box-number">
+											<div class="box-number__number">
+												<h2 class="js-counter" data-counter-time="2000" data-counter-delay="10">99</h2>
+											</div>
+											<div class="box-number__description">Happy clients</div>
+										</div><!-- End / box-number -->
+										
+									</div>
+									<div class="col-sm-4 ">
+										
+										<!-- box-number -->
+										<div class="box-number">
+											<div class="box-number__number">
+												<h2 class="js-counter" data-counter-time="2000" data-counter-delay="10">1200</h2>
+											</div>
+											<div class="box-number__description">Message per Day</div>
+										</div><!-- End / box-number -->
+										
+									</div>
+									<div class="col-sm-4 ">
+										
+										<!-- box-number -->
+										<div class="box-number">
+											<div class="box-number__number">
+												<h2 class="js-counter" data-counter-time="2000" data-counter-delay="10">15</h2>
+											</div>
+											<div class="box-number__description">Awards</div>
+										</div><!-- End / box-number -->
+										
+									</div>
+									
+								</div>
+								<center><a class="btn btn-primary " href={% url "contactfr" %}>Contactez-nous</a></center>
+							</div>
+							<div class="col-lg-6 ">
+								<div class="js-consult-slider">
+									
+									<!-- carousel__element owl-carousel -->
+									<div class="carousel__element owl-carousel" data-options='{"items":1,"loop":true,"dots":false,"nav":false,"margin":30,"responsive":{"0":{"items":2},"576":{"items":3},"992":{"items":1}}}'>
+										<div class="image-full"><img src="{%static "assets/img/image-01.jpg" %}" alt=""></div>
+									</div><!-- End / carousel__element owl-carousel -->
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- End / Section -->
+				
+				<!-- Contact us-->
+				
+				<!-- Section -->
+				<section class="md-section md-skin-dark js-consult-form" style="background-image:url(&quot;/static/assets/img/backgrounds/1.jpg&quot;);">
+					<div class="md-overlay"></div>
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-8 offset-0 offset-sm-0 offset-md-0 offset-lg-2 ">
+								
+								<!-- title-01 -->
+								<div class="title-01 title-01__style-02">
+									<h2 class="title-01__title">Faite partie de l'équipe!</h2>
+									<div>
+										Nous employons des individus passionnés et talentueux, non seulement pour leurs compétences professionnelles exceptionnelles, mais aussi pour leur dévouement envers nos valeurs fondamentales. Chaque employé est un maillon précieux dans la chaîne du succès de notre entreprise.</div>
+								</div><!-- End / title-01 -->
+								
+								<center><a class="btn btn-primary " href={% url "emploifr" %}>Nous employons</a></center>
+							</div>
+						</div>
+						
+					</div>
+				</section>
+				<!-- End / Section -->
+				
+				<!-- What’s Client Say ?-->
+				
+				<!-- Section -->
+				<section class="md-section" style="padding-bottom:0;">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8 col-lg-8 offset-0 offset-sm-0 offset-md-2 offset-lg-2 ">
+								
+								<!-- title-01 -->
+								<div class="title-01">
+									<h2 class="title-01__title">Feedback de nos clients </h2>
+								</div><!-- End / title-01 -->
+								
+							</div>
+						</div>
+						<div class="consult-slide">
+							
+							<!-- carousel__element owl-carousel -->
+							<div class="carousel__element owl-carousel" data-options='{"loop":true,"dots":true,"nav":false,"margin":30,"responsive":{"0":{"items":1},"992":{"items":2}}}'>
+								
+								<!-- testimonial -->
+								<div class="testimonial">
+									<div class="testimonial__info"><a class="testimonial__avatar" ><img src="{%static "assets/img/avatars/avatar-0.jpg" %}" alt=""/></a>
+										<h5 class="testimonial__name">Andi Vukaj</h5><span class="testimonial__position">Gérant de terminal</span><br><span class="testimonial__position">TForce Freight Canada</span>
+									</div>
+									<div class="testimonial__content">
+										<div class="testimonial__text">Depuis janvier 2022, Placement Margarita est un partenaire précieux pour nous. Ils sont une source fiable de main-d'œuvre et font preuve d'une grande réactivité face aux changements. Récemment, nous avons étendu notre collaboration en les engageant comme fournisseur de services de transport.</div>
+									</div>
+								</div><!-- End / testimonial -->
+								
+								
+								<!-- testimonial -->
+								<div class="testimonial">
+									<div class="testimonial__info"><a class="testimonial__avatar" href="#"><img src="{%static "assets/img/avatars/avatar-0.jpg" %}" alt=""/></a>
+										<h5 class="testimonial__name">TForce Freight Ca</h5>
+									</div>
+									<div class="testimonial__content">
+										<div class="testimonial__text">Nous recommandons vivement Placement Margarita pour leur travail exceptionnel et leur engagement envers l'excellence. </div>
+									</div>
+								</div><!-- End / testimonial -->
+								
+							</div><!-- End / carousel__element owl-carousel -->
+							
+						</div>
+					</div>
+				</section>
+				<!-- End / Section -->
+				<!-- Section -->
+				<!-- End / Section -->
+				
+			</div>
+			<!-- End / Content-->
+		{% endblock %}
+	</body>
+	
+
+</html>
+

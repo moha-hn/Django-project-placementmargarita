@@ -1,0 +1,109 @@
+{% extends 'basefr.html' %}
+{% load static %}
+
+
+
+<!DOCTYPE html>
+
+<html>
+	
+	<body>
+	
+		{% block title %}
+			Nous Employons
+		{% endblock %}	
+		{% block content %}	
+			<!-- header -->
+			<header class="header ">
+				<div class="container">
+					<div class="header__logo"><a href={% url 'indexfr' %}><img src="{%static 'assets/img/logo.png' %}" alt=""style="max-width:65px;"/></a></div>
+					<div class="header__toogleGroup">
+						<div class="header__chooseLanguage">
+										
+							<!-- dropdown -->
+							<div class="dropdown" data-init="dropdown"><a class="dropdown__toggle" href="javascript:void(0)">FR <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+								<div class="dropdown__content" data-position="right">
+									<ul class="list-style-none">
+										<li><a href={% url 'emploifr' %}>FR</a></li>
+										<li><a href={% url 'emploiesp' %}>ESP</a></li>
+									</ul>
+								</div>
+							</div><!-- End / dropdown -->
+							
+						</div>
+					</div>
+					
+					<!-- consult-nav -->
+					<nav class="consult-nav">
+						
+						<!-- consult-menu -->
+						<ul class="consult-menu">
+							<li ><a href={% url 'indexfr' %}>Accueil</a>
+							</li>
+							<li class="current-menu-item"><a href={% url 'emploifr' %}>Nous employons</a>
+							</li>
+                            <li ><a href={% url 'contactfr' %}>Contact</a>
+							</li>
+						</ul><!-- consult-menu -->
+						
+						<div class="navbar-toggle"><span></span><span></span><span></span></div>
+					</nav><!-- End / consult-nav -->
+					
+				</div>
+			</header><!-- End / header -->
+			
+			<!-- Content-->
+			
+			<!-- Section -->
+            <section class="md-section">
+                
+    
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-lg-8 offset-0 offset-sm-0 offset-md-2 offset-lg-2 ">
+                            
+                            <!-- title-01 -->
+                            <div class="title-01">
+								<form>
+									{% csrf_token %}
+									{{myfilter.form}}
+								</form>
+                            </div><!-- End / title-01 -->
+                        </div>
+                    </div>
+					
+						
+                    <div class="row">
+						
+                        {% for emp in emploi %}
+                            <div class="col-md-6 col-lg-6 col-xl-3 ">
+                                
+                                <!-- pricing -->
+                                <div class="pricing">
+                                    <header>
+                                        <h2 class="pricing__title">{{ emp.titre }}</h2>
+                                    </header>
+                                    <div>
+                                        <ul class="pricing__list">
+                                            <b><li>{{ emp.employeur }}</li></b>
+											<li>{{emp.horaire}}</li>
+                                            <li class="disable">{{ emp.description }}</li>
+                                        </ul>
+                                        <div class="pricing__price"><span>$</span>{{ emp.prix }}<span class="pricing__time">/ heure</span>
+                                        </div><a class="btn btn-primary btn-outline btn-w180" href={% url 'formfr' %}>Postuler</a>
+                                    </div>
+                                </div><!-- End / pricing -->
+                                
+                            </div>
+                        {% endfor %}
+                    </div>
+					
+            </section>
+            <!-- End / Section -->
+			<!-- End / Content-->
+		{% endblock %}
+	</body>
+	
+
+</html>
+

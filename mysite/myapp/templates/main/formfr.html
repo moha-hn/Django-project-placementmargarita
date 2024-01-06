@@ -1,0 +1,99 @@
+{% extends 'basefr.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+	
+	<body>
+	
+		{% block title %}
+			Postuler
+		{% endblock %}		
+		{% block content %}	
+			<!-- Section -->
+            <div class="page-wrap">
+			
+                <!-- header -->
+                <header class="header">
+                    <div class="container">
+                        <div class="header__logo"><a href={% url 'indexfr' %}><img src="{%static 'assets/img/logo.png' %}" alt=""/style="max-width:65px;"></a></div>
+                        <div class="header__toogleGroup">
+                            <div class="header__chooseLanguage">
+                                            
+                                <!-- dropdown -->
+                                <div class="dropdown" data-init="dropdown"><a class="dropdown__toggle" href="javascript:void(0)">FR <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <div class="dropdown__content" data-position="right">
+                                        <ul class="list-style-none">
+                                            <li><a href={% url 'formfr' %}>FR</a></li>
+                                            <li><a href={% url 'formesp' %}>ESP</a></li>
+                                        </ul>
+                                    </div>
+                                </div><!-- End / dropdown -->
+                                
+                            </div>
+                        </div>
+                        
+                        <!-- consult-nav -->
+                        <nav class="consult-nav">
+                            
+                            <!-- consult-menu -->
+                            <ul class="consult-menu">
+                                <li ><a href={% url 'indexfr' %}>Accueil</a>
+                                </li>
+                                <li class="current-menu-item"><a href={% url 'emploifr' %}>Nous employons</a>
+                                </li>
+                                <li ><a href={% url 'contactfr' %}>Contact</a>
+                                </li>
+                                
+                            </ul><!-- consult-menu -->
+                            
+                            <div class="navbar-toggle"><span></span><span></span><span></span></div>
+                        </nav><!-- End / consult-nav -->
+                        
+                    </div>
+                </header><!-- End / header -->
+                
+                <!-- Content-->
+                <div class="md-content">
+                    
+                    <!-- Section -->
+                    <section class="md-section js-consult-form" style="background-color:#f7f7f7;">
+                        <div class="container">
+                            
+                            <!-- form-01 -->
+                            <div class="form-01 consult-form js-consult-form__content"  >
+                                <h2 class="form-01__title">Postuler pour la job</h2>
+                                <form class="form-01__form" method="POST" enctype="multipart/form-data"> 
+                                    {% csrf_token %}
+                                    {{form}}
+                                    <br><br><br>
+                                    <button type="submit" class="btn btn-primary btn-outline btn-w180">Submit</button>
+                                </form>
+                            </div><!-- End / form-01 --><!-- End / form-01 -->
+                            
+                        </div>
+                    </section>
+                    <!-- End / Section -->
+                    
+                    
+                    <!-- Section -->
+                    <section class="md-section">
+                        <div class="container">
+                            
+                        </div>
+                    </section>
+                    <!-- End / Section -->
+                    
+                </div>
+                <!-- End / Content-->
+                
+                <!-- footer -->>
+                
+            </div>
+            <!-- End / Section -->
+		{% endblock %}
+	</body>
+	
+
+</html>
