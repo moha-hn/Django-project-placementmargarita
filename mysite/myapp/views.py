@@ -53,7 +53,7 @@ def emploifr(request):
 
 def emploiesp(request):
     emploi=job.objects.all()
-    myfilter=jobfilter(request.GET ,queryset=emploi)
+    myfilter=jobfilteresp(request.GET ,queryset=emploi)
     emploi=myfilter.qs
     context={
         'emploi':emploi,
@@ -131,7 +131,8 @@ def formesp(request):
         form = candidatformesp(request.POST)
         if form.is_valid():
             form.save()
-            subject = request.POST.get('job')
+            jobb=request.POST.get('job')
+            subject = job.objects.get(id=jobb)
             nom = request.POST.get('nom')
             prenom = request.POST.get('prenom')
             mail = request.POST.get('email')
@@ -167,7 +168,8 @@ def formfr(request):
         form = candidatform(request.POST)
         if form.is_valid():
             form.save()
-            subject = request.POST.get('job')
+            jobb=request.POST.get('job')
+            subject = job.objects.get(id=jobb)
             nom = request.POST.get('nom')
             prenom = request.POST.get('prenom')
             mail = request.POST.get('email')
@@ -178,14 +180,15 @@ def formfr(request):
             'job':subject,
             })
             from_email = settings.EMAIL_HOST_USER
-            uploaded_file = request.FILES['cv'] 
             email = EmailMessage(
                 subject,
                 body,
                 from_email,
                 ["mhanou442@gmail.com",],
             )
-            email.attach(uploaded_file.name, uploaded_file.read(), uploaded_file.content_type)
+            if request.FILES:      
+                uploaded_file = request.FILES['cv'] 
+                email.attach(uploaded_file.name, uploaded_file.read(), uploaded_file.content_type)
             email.send()
 
             return redirect('emploifr')
