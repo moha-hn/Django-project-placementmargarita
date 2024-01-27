@@ -185,6 +185,7 @@ def formfr(request):
                 body,
                 from_email,
                 ["mhanou442@gmail.com",],
+                fail_silently=True,
             )
             if request.FILES:      
                 uploaded_file = request.FILES['cv'] 
