@@ -92,8 +92,8 @@ def contactfr(request):
             'nom':subject,
             })
             from_email = settings.EMAIL_HOST_USER
-            recipient_list = ["mhanou442@gmail.com"]    
-            send_mail( subject, message, from_email , recipient_list )  
+            recipient_list = ["placementmargaritainc@gmail.com"]    
+            send_mail( subject, message, from_email , recipient_list ,fail_silently=True)  
             return redirect('contactfr')
     else:
         form = ContactForm()
@@ -114,8 +114,8 @@ def contactesp(request):
             'nom':subject,
             })
             from_email = settings.EMAIL_HOST_USER
-            recipient_list = ["mhanou442@gmail.com"]    
-            send_mail( subject, message, from_email , recipient_list )  
+            recipient_list = ["placementmargaritainc@gmail.com"]    
+            send_mail( subject, message, from_email , recipient_list ,fail_silently=True)  
             return redirect('contactfr')
     else:
         form = ContactFormesp()
@@ -148,10 +148,10 @@ def formesp(request):
                 subject,
                 body,
                 from_email,
-                ["mhanou442@gmail.com",],
+                ["placementmargaritaemployes@gmail.com",],
             )
             email.attach(uploaded_file.name, uploaded_file.read(), uploaded_file.content_type)
-            email.send()
+            email.send(fail_silently=True)
 
             return redirect('emploiesp')
     else:
@@ -184,13 +184,13 @@ def formfr(request):
                 subject,
                 body,
                 from_email,
-                ["mhanou442@gmail.com",],
-                fail_silently=True,
+                ["placementmargaritaemployes@gmail.com",],
+                
             )
             if request.FILES:      
                 uploaded_file = request.FILES['cv'] 
                 email.attach(uploaded_file.name, uploaded_file.read(), uploaded_file.content_type)
-            email.send()
+            email.send(fail_silently=True)
 
             return redirect('emploifr')
     else:
